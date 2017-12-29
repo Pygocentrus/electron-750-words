@@ -1,3 +1,4 @@
+const url = require('url');
 const path = require('path');
 const electron = require('electron');
 
@@ -16,7 +17,14 @@ function createWindow() {
   };
 
   mainWindow = new BrowserWindow(windowOptions);
-  mainWindow.loadURL(path.join('file://', __dirname, '/app.html'));
+
+  // Use dev server or static built assets
+  const startUrl = process.env.ELECTRON_START_URL || url.format({
+    pathname: path.join(__dirname, '../dist/index.html'),
+    protocol: 'file:',
+    slashes: true
+  });
+  mainWindow.loadURL(startUrl);
 
   if (!isProd) {
     mainWindow.webContents.openDevTools();
