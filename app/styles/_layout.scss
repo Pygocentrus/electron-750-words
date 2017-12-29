@@ -1,0 +1,12 @@
+* {
+  /* Disable text selection, or your app will feel like a web page */
+  -webkit-user-select: none;
+  -webkit-app-region: drag;
+
+  /* Cover the whole window */
+  height: 100%;
+
+  /* Antialiasing */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
