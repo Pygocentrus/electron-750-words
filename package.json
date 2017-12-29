@@ -5,9 +5,9 @@
   "main": "index.js",
   "scripts": {
     "dev:app": "node_modules/.bin/parcel ./app/index.html",
-    "dev:electron": "ELECTRON_START_URL=http://localhost:1234 node_modules/.bin/electron ./app/main.js",
+    "dev:electron": "ELECTRON_START_URL=http://localhost:1234 node_modules/.bin/electron ./electron/main.js",
     "build:app": "NODE_ENV=production node_modules/.bin/parcel build app/index.html --out-dir dist/ --public-url ./",
-    "build:electron": "NODE_ENV=production node_modules/.bin/electron ./app/main.js"
+    "build:electron": "NODE_ENV=production node_modules/.bin/electron ./electron/main.js"
   },
   "keywords": [],
   "author": "",
