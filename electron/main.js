@@ -8,7 +8,7 @@ const app = electron.app;
 let mainWindow = null;
 
 
-function createWindow() {
+const createWindow = () => {
   const windowOptions = {
     width: 1200,
     minWidth: 680,
@@ -33,7 +33,7 @@ function createWindow() {
   mainWindow.on('closed', () => {
     mainWindow = null;
   });
-}
+};
 
 
 app.on('ready', () => {
