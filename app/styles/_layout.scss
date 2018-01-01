@@ -3,10 +3,12 @@
   -webkit-user-select: none;
   -webkit-app-region: drag;
 
-  /* Cover the whole window */
-  height: 100%;
-
   /* Antialiasing */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  /* Cover the whole window */
+  height: 100%;
 }
